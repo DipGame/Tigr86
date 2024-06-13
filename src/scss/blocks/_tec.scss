@@ -1,0 +1,146 @@
+.tec {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    padding: 100px 0 60px;
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+
+    .cont_1 {
+        width: 100%;
+        max-width: 925px;
+
+        h2 {
+            font-family: Inter;
+            font-size: 48px;
+            font-weight: 500;
+            line-height: 62.4px;
+            text-align: left;
+            color: #1D1D1B;
+            margin-bottom: 40px;
+        }
+
+        p {
+            font-family: Inter;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 22.4px;
+            text-align: left;
+            color: #1D1D1B;
+            margin-bottom: 40px;
+        }
+
+        h3 {
+            font-family: Inter;
+            font-size: 24px;
+            font-weight: 500;
+            line-height: 31.2px;
+            text-align: left;
+
+            color: #1D1D1B;
+            margin-bottom: 20px;
+        }
+
+        a.button {
+            max-width: 225px;
+            font-family: Inter;
+            font-size: 12px;
+            font-weight: 600;
+            line-height: 14.52px;
+            text-align: center;
+        }
+
+        a.button:hover {
+            color: #00479D !important;
+        }
+    }
+}
+
+.card_log {
+    width: 100%;
+    max-width: 445px;
+    background-color: #00479D;
+    padding: 40px 30px 100px;
+    background-repeat: no-repeat;
+    background-position: 100% 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    height: min-content;
+
+    .img {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        img {
+            object-fit: contain;
+        }
+    }
+
+    a.button {
+        max-width: 120px;
+        background-color: #ED6928;
+        height: 50px;
+    }
+
+    a.button:hover {
+        background-color: #FFF;
+        color: #00479D !important;
+    }
+}
+
+@media (max-width: 900px) {
+    .tec {
+        flex-direction: column;
+
+        .cont_1 {
+            width: 100%;
+            max-width: 925px;
+
+            h2 {
+                font-family: Inter;
+                font-size: 24px;
+                font-weight: 500;
+                line-height: 31.2px;
+                text-align: left;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 19.6px;
+                text-align: left;
+            }
+
+            h3 {
+                font-family: Inter;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 23.4px;
+                text-align: left;
+            }
+
+            a.button {
+                font-family: Inter;
+                font-size: 12px;
+                font-weight: 600;
+                line-height: 14.52px;
+                text-align: center;
+            }
+        }
+    }
+
+    .card_log {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 415px) {
+    .card_log {
+        min-height: 530px;
+        gap: 20px;
+    }
+}

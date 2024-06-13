@@ -1,4 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
+
+    if (document.querySelector('.footer__container') && document.querySelector('.gif')) {
+        const gifFootLog = document.querySelector('.gif');
+        const gifFootImg = gifFootLog.querySelectorAll('img');
+
+        gifFootImg.forEach(element => {
+            setInterval(() => {
+                element.classList.toggle("invise_2");
+            }, 3000);
+        });
+    }
+
+    if (document.querySelector('.adr__container') && document.querySelector('.mail')) {
+        const adrContainer = document.querySelector('.adr__container');
+        const mailCont = document.querySelector('.mail');
+        let copyMail = mailCont.cloneNode(true);
+        adrContainer.appendChild(copyMail);
+    }
+
     if (document.querySelector('.search__container')) {
         const searchContainer = document.querySelector('.search__container');
         const searchForm = searchContainer.querySelector('.search__form');
@@ -53,16 +72,20 @@ document.addEventListener("DOMContentLoaded", function () {
     if (document.querySelector('.nav__header')) {
         const navHeader = document.querySelector('.nav__header');
         const navContainer = navHeader.querySelector('.cont');
-        const burgerBtn = document.querySelector('.burger_btn');
+        const burgerBtn = document.querySelectorAll('.burger_btn');
         const overlay = document.querySelector('.overlay');
 
-        burgerBtn.addEventListener('click', () => { 
-            navContainer.classList.toggle("open");
-            overlay.classList.toggle("open");
-         })
-         overlay.addEventListener('click', () => { 
+        burgerBtn.forEach(element => {
+            element.addEventListener('click', () => {
+                document.querySelector('.burger_btn_1').classList.toggle("invise");
+                document.querySelector('.burger_btn_2').classList.toggle("invise");
+                navContainer.classList.toggle("open");
+                overlay.classList.toggle("open");
+            })
+        });
+        overlay.addEventListener('click', () => {
             navContainer.classList.remove("open");
             overlay.classList.remove("open");
-         })
+        })
     }
 });

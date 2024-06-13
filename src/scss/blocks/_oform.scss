@@ -1,0 +1,90 @@
+.oform {
+    background-color: #00479D;
+    display: flex;
+    padding: 80px 20px;
+    width: 100%;
+}
+
+.oform__container {
+    width: 100%;
+    max-width: 1410px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    h2 {
+        font-family: Inter;
+        font-size: 48px;
+        font-weight: 500;
+        line-height: 62.4px;
+        text-align: center;
+        color: #FFF;
+    }
+
+    .flex {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px 20px;
+        justify-content: space-between;
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 200px;
+            margin: 0 auto;
+
+            img {
+                width: 60px;
+                height: 60px;
+                object-fit: contain;
+                object-position: center;
+            }
+
+            p {
+                font-family: Inter;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 25.2px;
+                text-align: left;
+                color: #FFF;
+            }
+
+            @media (max-width: 1180px) {
+                p {
+                    text-align: center;
+                }
+
+                img {
+                    margin: 0 auto;
+                }
+            }
+        }
+
+    }
+}
+
+@media (max-width: 545px) {
+    .oform__container h2 {
+        font-family: Inter;
+        font-size: 30px;
+        font-weight: 500;
+        line-height: 39px;
+        text-align: center;
+
+    }
+
+    .oform__container .flex .card p {
+        font-family: Inter;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.2px;
+        text-align: center;
+    }
+
+    .oform__container .flex .card {
+        width: 155px;
+    }
+}

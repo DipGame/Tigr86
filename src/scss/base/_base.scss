@@ -42,7 +42,7 @@ a,
 span,
 section,
 button {
-	font-family: Manrope;
+	font-family: Inter;
 	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
@@ -118,7 +118,7 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: Manrope;
+	font-family: Inter;
 	font-size: 24px;
 	font-weight: 700;
 	line-height: 36px;
@@ -146,6 +146,15 @@ main {
 }
 
 // Забери отсюда
+
+section.padding {
+	padding: 0 20px;
+}
+
+section.flex {
+	display: flex;
+}
+
 a.button {
 	display: flex;
 	justify-content: center;
@@ -170,19 +179,23 @@ a.button {
 
 a.button:hover {
 	background-color: #fff;
-	color: #000 !important;
+	color: #00479D !important;
 	transition: all .5s;
 	border: 1px solid #00479D;
 }
 
 @media (max-width: 900px) {
-	a.button {
-		
-	}
+	a.button {}
 }
 
 .invise {
 	display: none !important;
+}
+
+.invise_2 {
+	visibility: hidden !important;
+	opacity: 0 !important;
+	transition: .5s !important;
 }
 
 // до сюда
